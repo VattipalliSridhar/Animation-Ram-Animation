@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor"
+    tools:context="com.katamapps.ramcleaner.MainActivity">
+
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="?attr/colorPrimary"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme" />
+
+    <RelativeLayout
+
+        android:id="@+id/full_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+
+        <RelativeLayout
+            android:id="@+id/storage_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+
+                <RelativeLayout
+                    android:id="@+id/internal_storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#9400D3"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="Internal Storage"/>
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/internal_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+
+
+                        <TextView
+                            android:id="@+id/internal_view_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="invisible"
+                            android:textColor="@android:color/black"/>
+
+                    </RelativeLayout>
+
+
+
+
+                    <TextView
+                        android:layout_below="@+id/internal_view"
+                        android:id="@+id/internal_total_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#e63a70"
+                        android:drawableLeft="@drawable/ic_total"/>
+                    <TextView
+                        android:layout_below="@+id/internal_total_txt"
+                        android:id="@+id/internal_free_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#faa832"
+                        android:drawableLeft="@drawable/ic_free"/>
+                    <TextView
+                        android:layout_below="@+id/internal_free_txt"
+                        android:id="@+id/internal_use_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#52a1d8"
+                        android:drawableLeft="@drawable/ic_use"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/external_storage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="5dp"
+                        android:textColor="#4B0082"
+                        android:textStyle="bold"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:text="External Storage"/>
+
+
+                    <RelativeLayout
+                        android:id="@+id/external_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true">
+
+                        <ImageView
+                            android:id="@+id/external_view_img"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_alignParentBottom="true"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/ic_micro_sd_card"
+                            />
+
+                        <TextView
+                            android:id="@+id/external_view_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:visibility="invisible"
+                            android:textColor="@android:color/black"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_below="@+id/external_view"
+                        android:id="@+id/external_total_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#e63a70"
+                        android:drawableLeft="@drawable/ic_total"/>
+                    <TextView
+                        android:layout_below="@+id/external_total_txt"
+                        android:id="@+id/external_free_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#faa832"
+                        android:drawableLeft="@drawable/ic_free"/>
+                    <TextView
+                        android:layout_below="@+id/external_free_txt"
+                        android:id="@+id/external_use_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#52a1d8"
+                        android:drawableLeft="@drawable/ic_use"/>
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/storage_layout"
+            android:id="@+id/ram_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#0000FF"
+                android:textStyle="bold"
+                android:textAppearance="?android:textAppearanceMedium"
+                android:text="RAM"/>
+
+            <RelativeLayout
+                android:id="@+id/ram_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"/>
+
+
+            <TextView
+                android:id="@+id/ram_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:textColor="#0000FF"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
